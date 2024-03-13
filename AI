@@ -1,0 +1,13 @@
+# OpenAI
+
+
+DOMAIN-SUFFIX,openai.com 
+DOMAIN-SUFFIX,ai.com 
+
+# Google
+
+DOMAIN-SUFFIX,bard.google.com
+
+# Test AI IP
+
+DOMAIN-SUFFIX,ip138.com 
