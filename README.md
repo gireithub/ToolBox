@@ -1,6 +1,6 @@
 # ToolBox
 
-我的 ShadowRocket Config: [MyConfig]()
+我的 ShadowRocket Config: [MyConfig](https://raw.githubusercontent.com/gireithub/ToolBox/main/MyConfig)
 
 1. 直连网络：[DirectDomainList.list]()
 2. 套 Warp 网络：[WarpList.list]()
