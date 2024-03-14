@@ -1,12 +1,17 @@
-# OpenAI
+ # Claude
 
-
-DOMAIN-SUFFIX,openai.com 
-DOMAIN-SUFFIX,ai.com 
+DOMAIN,cdn.usefathom.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
 
 # Google
 
 DOMAIN-SUFFIX,bard.google.com
+
+# OpenAI
+
+DOMAIN-SUFFIX,openai.com 
+DOMAIN-SUFFIX,ai.com
 
 # Test AI IP
 
