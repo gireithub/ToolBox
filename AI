@@ -1,5 +1,5 @@
 # Claude
-# rule/Clash/Claude/Claude.list
+# https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/Claude/Claude.list
 DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
