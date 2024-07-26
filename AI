@@ -4,6 +4,7 @@ DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 
+
 # Google
 
 DOMAIN-SUFFIX,bard.google.com
@@ -11,11 +12,11 @@ DOMAIN-SUFFIX,gemini.google.com
 
 # OpenAI
 
-DOMAIN-SUFFIX,ai.com
 DOMAIN-KEYWORD,openai
+DOMAIN,gemini.google.com
 DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
