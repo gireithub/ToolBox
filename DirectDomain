@@ -17,6 +17,9 @@ DOMAIN-SUFFIX,1190119.com
 DOMAIN-SUFFIX,dataesb.com
 # 上海市肺科医院
 DOMAIN-SUFFIX,ngarihealth.com
+# 停车平台
+DOMAIN-SUFFIX,bolink.club
+
 
 # 银行类
 
@@ -48,3 +51,4 @@ DOMAIN-SUFFIX,weimaipay.com
 DOMAIN-SUFFIX,ysepay.com
 # 浙江农信银行
 DOMAIN-SUFFIX,zj96596.com
+
