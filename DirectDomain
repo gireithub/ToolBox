@@ -20,6 +20,10 @@ DOMAIN-SUFFIX,ngarihealth.com
 # 停车平台
 DOMAIN-SUFFIX,bolink.club
 DOMAIN-SUFFIX,hikparking.com 
+# 微信
+DOMAIN-SUFFIX,weixin.qq.com
+DOMAIN-SUFFIX,mp.weixin.qq.com
+DOMAIN-SUFFIX,servicewechat.com
 
 # 银行类
 
