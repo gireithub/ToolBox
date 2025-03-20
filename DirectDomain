@@ -25,6 +25,8 @@ DOMAIN-SUFFIX,hikparking.com
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,mp.weixin.qq.com
 DOMAIN-SUFFIX,servicewechat.com
+# 围棋
+DOMAIN-SUFFIX,101weiqi.com
 
 # 银行类
 
