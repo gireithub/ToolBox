@@ -1,4 +1,4 @@
-#!name=My YouTube
+#!name=YouTube
 #!desc=Universal YouTube & YouTube Music enhancer — ad/blocking, PiP/background, captions & lyrics translation. / 适用于 YouTube & YouTube Music：广告屏蔽、画中画/后台、字幕与歌词翻译
 #!arguments=captionLang:off, lyricLang:off, blockUpload:true, blockImmersive:false, blockShorts:true, debug:false
 #!arguments-desc=
