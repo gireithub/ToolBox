@@ -2,36 +2,39 @@
 
 # 工具类
 
-# 英语听力
-DOMAIN-SUFFIX,aboboo.com
+# 围棋
+DOMAIN-SUFFIX,101weiqi.com
+# 规范
+DOMAIN-SUFFIX,1190119.com
+# 19 楼
+DOMAIN-SUFFIX,19lou.com
 # 中石化
 DOMAIN-SUFFIX,95105888.com
 DOMAIN-SUFFIX,ejoy365.com
-# 19楼
-DOMAIN-SUFFIX,19lou.com
-# 影视
-DOMAIN-SUFFIX,sourl.cn
-DOMAIN-SUFFIX,teambition.com
-# 规范
-DOMAIN-SUFFIX,1190119.com
-# 图书馆
-DOMAIN-SUFFIX,dataesb.com
-# 上海市肺科医院
-DOMAIN-SUFFIX,ngarihealth.com
+# 英语听力
+DOMAIN-SUFFIX,aboboo.com
+# 高德
+DOMAIN-SUFFIX,amap.com
 # 停车平台
 DOMAIN-SUFFIX,bolink.club
 DOMAIN-SUFFIX,hikparking.com 
 DOMAIN-SUFFIX,tzzntc.com
+# 图书馆
+DOMAIN-SUFFIX,dataesb.com
+IP-CIDR,123.157.166.1/32
+IP-CIDR,10.28.200.254/32
+# 咸鱼
+DOMAIN-SUFFIX,goofish.com
+# 上海市肺科医院
+DOMAIN-SUFFIX,ngarihealth.com
+# 影视
+DOMAIN-SUFFIX,sourl.cn
+DOMAIN-SUFFIX,teambition.com
 # 微信
 DOMAIN-SUFFIX,weixin.qq.com
 DOMAIN-SUFFIX,mp.weixin.qq.com
 DOMAIN-SUFFIX,servicewechat.com
-# 围棋
-DOMAIN-SUFFIX,101weiqi.com
-# 咸鱼
-DOMAIN-SUFFIX,goofish.com
-# 高德
-DOMAIN-SUFFIX,amap.com
+
 # 银行类
 
 # 我爱卡
