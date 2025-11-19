@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,hikparking.com
 DOMAIN-SUFFIX,tzzntc.com
 # 图书馆
 DOMAIN-SUFFIX,dataesb.com
+DOMAIN-SUFFIX,51awifi.com
 IP-CIDR,123.157.166.1/32
 IP-CIDR,10.28.200.254/32
 # 咸鱼
