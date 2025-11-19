@@ -4,3 +4,4 @@ My ShadowRocket Config: [MyConfig](https://raw.githubusercontent.com/gireithub/T
 
 1. 直连网络：[DirectDomain](https://raw.githubusercontent.com/gireithub/ToolBox/main/DirectDomain.list)
 2. 代理变换网络： [ProxyChangeList.list](https://raw.githubusercontent.com/gireithub/ToolBox/main/ProxyChange.list)
+3. 
