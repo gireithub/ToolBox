@@ -1,0 +1,51 @@
+#!name=YouTube (Music) Enhance (Merged)
+#!desc=Universal YouTube & YouTube Music enhancer — ad/blocking, PiP/background, captions & lyrics translation. / 适用于 YouTube & YouTube Music：广告屏蔽、画中画/后台、字幕与歌词翻译
+#!arguments=captionLang:off, lyricLang:off, blockUpload:true, blockImmersive:false, blockShorts:true, debug:false
+#!arguments-desc=
+# English:
+#  - captionLang: language code for caption translation or 'off'
+#  - lyricLang: language code for lyric translation or 'off'
+#  - blockUpload: true/false to hide upload button
+#  - blockImmersive: true/false to hide chapters/segments button
+#  - blockShorts: true/false to hide Shorts button
+#  - debug: true/false for verbose logs
+#
+# 中文说明（参数与上方对应）：
+#  - 字幕翻译语言 (captionLang)：填写 Google 翻译语言代码，或填 off 关闭
+#  - 歌词翻译语言 (lyricLang)：填写 Google 翻译语言代码，或填 off 关闭
+#  - 屏蔽上传按钮 (blockUpload)：true/false
+#  - 屏蔽选段按钮 (blockImmersive)：true/false
+#  - 屏蔽Shorts按钮 (blockShorts)：true/false
+#  - 启用调试模式 (debug)：true/false
+
+# Origin Authors: @DivineEngine, @app2smile, @Maasea, @VirgilClyne
+# Merged/refined by: @ddgksf2013, translated/refined for shadowrocket by @deezertidal and others
+
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+
+[Url Rewrite]
+# Block certain googlevideo oad initplayback responses
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad _ reject-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
+
+# Universal ad/stat/tracking endpoints
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+
+# General video ad request tweak (preserve original query arrangement)
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+
+[Map Local]
+# Serve empty successful response for certain initplayback oad requests
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
+
+[Script]
+# Unified response script for youtubei v1 endpoints (browse|next|player|search|reel/...|guide|account/get_setting|get_watch)
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js,argument="{"lyricLang":"{{{lyricLang}}}","captionLang":"{{{captionLang}}}","blockUpload":"{{{blockUpload}}}","blockImmersive":"{{{blockImmersive}}}","blockShorts":"{{{blockShorts}}}","debug":"{{{debug}}}"}"
+
+[MITM]
+# Hostnames required for script/rewrites to operate
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, -redirector*.googlevideo.com
