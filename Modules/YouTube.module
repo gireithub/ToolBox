@@ -25,23 +25,23 @@
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
-[Url Rewrite]
+#[Url Rewrite]
 # Block certain googlevideo oad initplayback responses
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad _ reject-200
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!videoplayback\?).+&oad _ reject-200
-^https?:\/\/[\w-]+\.googlevideo\.com\/dclk_video_ads _ reject-200
+#^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad _ reject-200
+#^https?:\/\/[\w-]+\.googlevideo\.com\/(?!videoplayback\?).+&oad _ reject-200
+#^https?:\/\/[\w-]+\.googlevideo\.com\/dclk_video_ads _ reject-200
 
 # Universal ad/stat/tracking endpoints
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+#^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
+#^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
+#^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
 
 # General video ad request tweak (preserve original query arrangement)
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+#(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
 
-[Map Local]
+#[Map Local]
 # Serve empty successful response for certain initplayback oad requests
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
+#^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
 
 [Script]
 # Unified response script for youtubei v1 endpoints (browse|next|player|search|reel/...|guide|account/get_setting|get_watch)
