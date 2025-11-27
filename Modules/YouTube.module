@@ -22,11 +22,8 @@
 # Merged/refined by: @ddgksf2013, translated/refined for shadowrocket by @deezertidal and others
 
 [Rule]
-# The following REJECT rules blocked UDP (QUIC/HTTP3) connections to googlevideo
-# which caused playback/next-video issues. QUIC is used for video streaming so
-# rejecting UDP to googlevideo can make the player unable to load the next video.
-#AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
-#AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
 [Url Rewrite]
 # Block certain googlevideo oad initplayback responses
@@ -45,9 +42,7 @@
 [Map Local]
 # Disabled map-local for initplayback because returning an empty successful
 # response can break the player (it expects structured initplayback data).
-# If you still need to override ad initplayback responses, narrow the scope
-# and test thoroughly. Disabled to avoid 'next video' playback failures.
-#^https?:\/\/[_\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
+^https?:\/\/[_\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
 
 [Script]
 # Unified response script for youtubei v1 endpoints (browse|next|player|search|reel/...|guide|account/get_setting|get_watch)
