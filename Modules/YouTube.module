@@ -25,19 +25,15 @@
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 
-[Url Rewrite]
-# Block certain googlevideo oad initplayback responses
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad _ reject-200
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!videoplayback\?).+&oad _ reject-200
-^https?:\/\/[\w-]+\.googlevideo\.com\/dclk_video_ads _ reject-200
+[URL Rewrite]
 
-# Universal ad/stat/tracking endpoints
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
-
-# General video ad request tweak (preserve original query arrangement)
+# ======= 视频广告请求 ======= #
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject-200
+# ======= 通用广告请求 ======= #
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200
 
 [Map Local]
 # Disabled map-local for initplayback because returning an empty successful
@@ -50,4 +46,4 @@ youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.c
 
 [MITM]
 # Hostnames required for script/rewrites to operate
-hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com, redirector*.googlevideo.com
+hostname = %APPEND% -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
