@@ -22,8 +22,8 @@ DOMAIN-SUFFIX,tzzntc.com
 # 图书馆
 DOMAIN-SUFFIX,dataesb.com
 DOMAIN-SUFFIX,51awifi.com
-# IP-CIDR,123.157.166.1/32,no-resolve
-# IP-CIDR,10.28.200.254/32,no-resolve
+IP-CIDR,123.157.166.1/32,no-resolve
+IP-CIDR,10.28.200.254/32,no-resolve
 # 咸鱼
 DOMAIN-SUFFIX,goofish.com
 # 上海市肺科医院
