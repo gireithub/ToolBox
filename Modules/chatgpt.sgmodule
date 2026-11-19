@@ -16,4 +16,4 @@
 ^https?:\/\/ios\.chat\.openai\.com\/public-api\/mobile\/app_support_status data-type=json data="{}" status-code=200
 
 [MITM]
-hostname= %APPEND% 
+hostname= %APPEND% ios.chat.openai.com

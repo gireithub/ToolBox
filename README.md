@@ -2,8 +2,9 @@
 
 My ShadowRocket Config: [MyConfig](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Configuration/MyConfig.ini) 
 
-1. 直连网络：[DirectDomain](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Rules/DirectDomain.list) 
-2. 代理变换网络： [ProxyChangeList.list](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Rules/ProxyChange.list) 
+1. 直连网络：[DirectDomain.list](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Rules/DirectDomain.list) 
+2. 代理变换网络：[ProxyChange.list](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Rules/ProxyChange.list) 
+3. HttpDNS 拦截：[HttpDNS.list](https://raw.githubusercontent.com/gireithub/ToolBox/refs/heads/main/Rules/HttpDNS.list) 
 
 # 重要声明
 

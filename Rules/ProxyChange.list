@@ -1,5 +1,8 @@
 # 代理改变列表
 
+# 百度网盘接口（确保模块 MITM 生效，大文件下载 *.baidupcs.com 仍走后续直连）
+DOMAIN-SUFFIX,pan.baidu.com
+
 # Futu
 DOMAIN-SUFFIX,futunn.com
 DOMAIN-SUFFIX,moomoo.com

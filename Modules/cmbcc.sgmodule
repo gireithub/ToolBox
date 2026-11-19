@@ -34,4 +34,4 @@ http-response ^https?:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/ClientFacePublic\/\w+
 ^https?:\/\/yummy2web01-edge-dmz\.bcs\.cmbchina\.com\/Edge\/api\/cmscampaign\.api\.HomeActivityClientControllerApi\/activityClientPartake data-type=json data="{}" status-code=200
 
 [MITM]
-hostname= %APPEND% mars.ccc.cmbchina.com, marscc.bcs.cmbchina.com, contentcc.bcs.cmbchina.com, intellicc.b*s.cmbchina.com, *mbasecc.b*s.cmbchina.com, interactivecc.b*s.cmbchina.com, yummy2web01-edge-dmz.bcs.cmbchina.com
+hostname= %APPEND% res.cc.cmbimg.com, mars.ccc.cmbchina.com, marscc.bcs.cmbchina.com, contentcc.bcs.cmbchina.com, intellicc.*.cmbchina.com, *mbasecc.*.cmbchina.com, interactivecc.*.cmbchina.com, yummy2web01-edge-dmz.bcs.cmbchina.com

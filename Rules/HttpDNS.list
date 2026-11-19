@@ -1,0 +1,35 @@
+# HttpDNS 拦截列表（防止客户端通过 IP 直连命中底部 GEOIP,CN,DIRECT 从而绕过模块 MITM）
+
+# 百度系
+DOMAIN,httpdns.baidu.com
+DOMAIN,httpsdns.baidu.com
+DOMAIN,httpdns.baidubce.com
+IP-CIDR,180.76.76.112/32,no-resolve
+IP-CIDR,180.76.76.200/32,no-resolve
+
+# 阿里系（淘宝 / 闲鱼 / 支付宝 / 饿了么 / 高德）
+DOMAIN,amdc.m.taobao.com
+DOMAIN,amdc.alipay.com
+DOMAIN,amdc-sibling.alipay.com.cn
+DOMAIN,httpdns.alicdn.com
+IP-CIDR,203.107.1.0/24,no-resolve
+
+# 腾讯 / 微信 / 京东 / 网易
+DOMAIN,dns.jd.com
+DOMAIN,dns.weixin.qq.com.cn
+DOMAIN,httpdns.n.netease.com
+IP-CIDR,119.29.29.98/31,no-resolve
+IP-CIDR,182.254.116.116/32,no-resolve
+
+# 小红书
+DOMAIN,mediacloud.xiaohongshu.com
+DOMAIN,httpdns.xiaohongshu.com
+
+# 美团
+DOMAIN,httpdnsmultiapi.meituan.com
+DOMAIN,httpdnsmultiapivip.meituan.com
+DOMAIN-SUFFIX,httpdns.meituan.com
+
+# 字节系（番茄小说等）
+DOMAIN,dig.bdurl.net
+DOMAIN,httpdns.volcengineapi.com
